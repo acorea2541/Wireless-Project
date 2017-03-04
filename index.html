@@ -33,12 +33,22 @@
             margin-top: 88px;
         }
     </style>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.21/p5.js"></script>
-    <script>
-    function preload() {  // preload() runs once
-  img = loadImage('tides.jpg');
-}
-</script>
+    <div class="hidden">
+  	<script type="text/javascript">
+  		<!--//--><![CDATA[//><!--
+  			var images = new Array()
+  			function preload() {
+  				for (i = 0; i < preload.arguments.length; i++) {
+  					images[i] = new Image()
+  					images[i].src = preload.arguments[i]
+  				}
+  			}
+  			preload(
+  				"tides.jpg",
+  			)
+  		//--><!]]>
+  	</script>
+  </div>
 </head>
 
 <body bgcolor="beefed">
